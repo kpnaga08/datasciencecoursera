@@ -12,4 +12,4 @@ complete <- function(directory,  id = 1:332) {
 }
 
 #Example usage
-complete(directory = '~/Desktop/specdata', id = 20:30)
+complete(directory = '~/Desktop/Week2/specdata', id = 20:30)

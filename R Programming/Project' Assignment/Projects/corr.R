@@ -13,4 +13,4 @@ corr <- function(directory, threshold = 0) {
 }
 
 # Example Usage
-corr(directory = '~/Desktop/specdata', threshold = 150)
+corr(directory = '~/Desktop/Week2/specdata', threshold = 150)

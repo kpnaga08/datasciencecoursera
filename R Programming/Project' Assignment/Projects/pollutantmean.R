@@ -1,4 +1,4 @@
-pollutantmean <- function(directory, pollutant, id = 1:332) {
+pollutantmean <- function("~/Desktop/Week2/Projects/pollutantmean.R", pollutant, id = 1:332) {
   
   # Format number with fixed width and then append .csv to number
   fileNames <- paste0(directory, '/', formatC(id, width=3, flag="0"), ".csv" )
@@ -12,5 +12,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   } 
 }
 
-# Example usage
-pollutantmean(directory = '~/Desktop/specdata', pollutant = 'sulfate', id = 20)
+pollutantmean(directory = '~/Desktop/Week2/specdata', pollutant = 'sulfate', id = 20)
+
+
+

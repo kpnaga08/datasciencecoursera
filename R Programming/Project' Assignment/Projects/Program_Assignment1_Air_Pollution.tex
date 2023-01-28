@@ -1,0 +1,427 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={W2 Program Assignment 1 Air Pollution},
+  pdfauthor={Kristina P. Sinaga},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{W2 Program Assignment 1 Air Pollution}
+\author{Kristina P. Sinaga}
+\date{2023-01-28}
+
+\begin{document}
+\maketitle
+
+\hypertarget{r-programming-project-1}{%
+\subsection{R Programming Project 1}\label{r-programming-project-1}}
+
+For this first programming assignment you will write three functions
+that are meant to interact with dataset that accompanies this
+assignment. The dataset is contained in a zip file specdata.zip that you
+can download from the Coursera web site.
+
+Although this is a programming assignment, you will be assessed using a
+separate quiz.
+
+The zip file containing the data can be downloaded here:
+\href{https://d396qusza40orc.cloudfront.net/rprog\%2Fdata\%2Fspecdata.zip}{specdata.zip}
+{[}2.4MB{]} Description: The zip file contains 332 comma-separated-value
+(CSV) files containing pollution monitoring data.
+
+\hypertarget{part-1-pollutantmean.r}{%
+\subsubsection{\texorpdfstring{Part 1
+(\href{https://github.com/kpnaga08/datasciencecoursera/blob/master/R\%20Programming/Project\textquotesingle{}\%20Assignment/Projects/pollutantmean.R}{pollutantmean.R})}{Part 1 (pollutantmean.R)}}\label{part-1-pollutantmean.r}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# install.packages("data.table")}
+\FunctionTok{library}\NormalTok{(}\StringTok{"data.table"}\NormalTok{)}
+
+\NormalTok{pollutantmean }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(directory, pollutant, }\AttributeTok{id =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{332}\NormalTok{) \{}
+  
+  \CommentTok{\# Format number with fixed width and then append .csv to number}
+\NormalTok{  fileNames }\OtherTok{\textless{}{-}} \FunctionTok{paste0}\NormalTok{(directory, }\StringTok{\textquotesingle{}/\textquotesingle{}}\NormalTok{, }\FunctionTok{formatC}\NormalTok{(id, }\AttributeTok{width=}\DecValTok{3}\NormalTok{, }\AttributeTok{flag=}\StringTok{"0"}\NormalTok{), }\StringTok{".csv"}\NormalTok{ )}
+  
+  \CommentTok{\# Reading in all files and making a large data.table}
+\NormalTok{  lst }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(fileNames, data.table}\SpecialCharTok{::}\NormalTok{fread)}
+\NormalTok{  dt }\OtherTok{\textless{}{-}} \FunctionTok{rbindlist}\NormalTok{(lst)}
+  
+  \ControlFlowTok{if}\NormalTok{ (}\FunctionTok{c}\NormalTok{(pollutant) }\SpecialCharTok{\%in\%} \FunctionTok{names}\NormalTok{(dt))\{}
+    \FunctionTok{return}\NormalTok{(dt[, }\FunctionTok{lapply}\NormalTok{(.SD, mean, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{), }\AttributeTok{.SDcols =}\NormalTok{ pollutant][[}\DecValTok{1}\NormalTok{]])}
+\NormalTok{  \} }
+\NormalTok{\}}
+
+\CommentTok{\# Example usage}
+\FunctionTok{pollutantmean}\NormalTok{(}\AttributeTok{directory =} \StringTok{\textquotesingle{}\textasciitilde{}/Desktop/Week2/specdata\textquotesingle{}}\NormalTok{, }\AttributeTok{pollutant =} \StringTok{\textquotesingle{}sulfate\textquotesingle{}}\NormalTok{, }\AttributeTok{id =} \DecValTok{20}\NormalTok{)}
+
+\CommentTok{\#Solution}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\FloatTok{3.625065}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{part-1-alternate-solution}{%
+\subsubsection{Part 1 Alternate
+Solution}\label{part-1-alternate-solution}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pollutantmean }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(directory, pollutant, }\AttributeTok{id=} \DecValTok{1}\SpecialCharTok{:}\DecValTok{332}\NormalTok{)\{}
+  
+  \DocumentationTok{\#\# Create an empty vector of pollutants}
+\NormalTok{  pollutants }\OtherTok{=} \FunctionTok{c}\NormalTok{()}
+  
+  \DocumentationTok{\#\# Get a list of filenames}
+\NormalTok{  filenames }\OtherTok{=} \FunctionTok{list.files}\NormalTok{(directory)}
+  
+  \DocumentationTok{\#\# For each .csv file in id}
+  \ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in}\NormalTok{ id)\{}
+    
+    \DocumentationTok{\#\# Concatinate the directory and filename}
+    \DocumentationTok{\#\# e.g. directory = "C:/folder", filenames = vector("001.csv", "002.csv", ...), filepath="C:/folder/001.csv"}
+\NormalTok{    filepath}\OtherTok{=}\FunctionTok{paste}\NormalTok{(directory,}\StringTok{"/"}\NormalTok{ ,filenames[i], }\AttributeTok{sep=}\StringTok{""}\NormalTok{)}
+    
+    \DocumentationTok{\#\# read in each file and store it in data}
+\NormalTok{    data }\OtherTok{=} \FunctionTok{read.csv}\NormalTok{(filepath, }\AttributeTok{header =} \ConstantTok{TRUE}\NormalTok{)}
+    
+    \DocumentationTok{\#\#Concatinate the vectors from each file of the pollutant(\textquotesingle{}sulfate\textquotesingle{} or \textquotesingle{}nitrate\textquotesingle{}) column to pollutants vector}
+\NormalTok{    pollutants }\OtherTok{=} \FunctionTok{c}\NormalTok{(pollutants, data[,pollutant])}
+    
+\NormalTok{  \}}
+  \DocumentationTok{\#\# Get the mean of the pollutants and remove NA values}
+\NormalTok{  pollutants\_mean }\OtherTok{=} \FunctionTok{mean}\NormalTok{(pollutants, }\AttributeTok{na.rm=}\ConstantTok{TRUE}\NormalTok{)}
+  
+  \DocumentationTok{\#\# Return the mean \textquotesingle{}pollutants\_mean\textquotesingle{}}
+\NormalTok{  pollutants\_mean}
+\NormalTok{\}}
+
+\CommentTok{\# Example usage}
+\FunctionTok{pollutantmean}\NormalTok{(}\AttributeTok{directory =} \StringTok{\textquotesingle{}\textasciitilde{}/Desktop/Week2/specdata\textquotesingle{}}\NormalTok{, }\AttributeTok{pollutant =} \StringTok{\textquotesingle{}sulfate\textquotesingle{}}\NormalTok{, }\AttributeTok{id =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{)}
+
+\CommentTok{\#Solution}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\FloatTok{4.064128}
+
+\CommentTok{\# Example usage}
+\FunctionTok{pollutantmean}\NormalTok{(}\AttributeTok{directory =} \StringTok{\textquotesingle{}\textasciitilde{}/Desktop/Week2/specdata\textquotesingle{}}\NormalTok{, }\AttributeTok{pollutant =} \StringTok{\textquotesingle{}nitrate\textquotesingle{}}\NormalTok{, }\AttributeTok{id =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{)}
+\CommentTok{\#Solution}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\FloatTok{0.7976266}
+
+\FunctionTok{pollutantmean}\NormalTok{(}\AttributeTok{directory =} \StringTok{\textquotesingle{}\textasciitilde{}/Desktop/Week2/specdata\textquotesingle{}}\NormalTok{, }\AttributeTok{pollutant =} \StringTok{\textquotesingle{}nitrate\textquotesingle{}}\NormalTok{, }\AttributeTok{id =} \DecValTok{70}\SpecialCharTok{:}\DecValTok{72}\NormalTok{)}
+\CommentTok{\#Solution}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\FloatTok{1.706047}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{part-2-complete.r}{%
+\subsubsection{\texorpdfstring{Part 2
+(\href{https://github.com/kpnaga08/datasciencecoursera/blob/master/R\%20Programming/Project\textquotesingle{}\%20Assignment/Projects/complete.R}{complete.R})}{Part 2 (complete.R)}}\label{part-2-complete.r}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{complete }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(directory,  }\AttributeTok{id =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{332}\NormalTok{) \{}
+  
+  \CommentTok{\# Format number with fixed width and then append .csv to number}
+\NormalTok{  fileNames }\OtherTok{\textless{}{-}} \FunctionTok{paste0}\NormalTok{(directory, }\StringTok{\textquotesingle{}/\textquotesingle{}}\NormalTok{, }\FunctionTok{formatC}\NormalTok{(id, }\AttributeTok{width=}\DecValTok{3}\NormalTok{, }\AttributeTok{flag=}\StringTok{"0"}\NormalTok{), }\StringTok{".csv"}\NormalTok{ )}
+  
+  \CommentTok{\# Reading in all files and making a large data.table}
+\NormalTok{  lst }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(fileNames, data.table}\SpecialCharTok{::}\NormalTok{fread)}
+\NormalTok{  dt }\OtherTok{\textless{}{-}} \FunctionTok{rbindlist}\NormalTok{(lst)}
+  
+  \FunctionTok{return}\NormalTok{(dt[}\FunctionTok{complete.cases}\NormalTok{(dt), .(}\AttributeTok{nobs =}\NormalTok{ .N), }\AttributeTok{by =}\NormalTok{ ID])}
+  
+\NormalTok{\}}
+
+\CommentTok{\#Example usage}
+\FunctionTok{complete}\NormalTok{(}\AttributeTok{directory =} \StringTok{\textquotesingle{}\textasciitilde{}/Desktop/specdata\textquotesingle{}}\NormalTok{, }\AttributeTok{id =} \DecValTok{20}\SpecialCharTok{:}\DecValTok{30}\NormalTok{)}
+
+\CommentTok{\#Solution}
+\NormalTok{    ID nobs}
+ \DecValTok{1}\SpecialCharTok{:} \DecValTok{20}  \DecValTok{124}
+ \DecValTok{2}\SpecialCharTok{:} \DecValTok{21}  \DecValTok{426}
+ \DecValTok{3}\SpecialCharTok{:} \DecValTok{22}  \DecValTok{135}
+ \DecValTok{4}\SpecialCharTok{:} \DecValTok{23}  \DecValTok{492}
+ \DecValTok{5}\SpecialCharTok{:} \DecValTok{24}  \DecValTok{885}
+ \DecValTok{6}\SpecialCharTok{:} \DecValTok{25}  \DecValTok{463}
+ \DecValTok{7}\SpecialCharTok{:} \DecValTok{26}  \DecValTok{586}
+ \DecValTok{8}\SpecialCharTok{:} \DecValTok{27}  \DecValTok{338}
+ \DecValTok{9}\SpecialCharTok{:} \DecValTok{28}  \DecValTok{475}
+\DecValTok{10}\SpecialCharTok{:} \DecValTok{29}  \DecValTok{711}
+\DecValTok{11}\SpecialCharTok{:} \DecValTok{30}  \DecValTok{932}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{part-2-alternate-solution}{%
+\subsubsection{Part 2 Alternate
+Solution}\label{part-2-alternate-solution}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{complete }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(directory, }\AttributeTok{id=} \DecValTok{1}\SpecialCharTok{:}\DecValTok{332}\NormalTok{)\{}
+  
+  \DocumentationTok{\#\# Create an empty vector of id\textquotesingle{}s}
+\NormalTok{  ids }\OtherTok{=} \FunctionTok{c}\NormalTok{()}
+  
+  \DocumentationTok{\#\# Create an empty vector of nobs}
+\NormalTok{  nobss }\OtherTok{=} \FunctionTok{c}\NormalTok{()}
+  
+  \DocumentationTok{\#\# Get a list of filenames}
+\NormalTok{  filenames }\OtherTok{=} \FunctionTok{list.files}\NormalTok{(directory)}
+  
+  \DocumentationTok{\#\# For each .csv file in id}
+  \ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in}\NormalTok{ id)\{}
+    
+    \DocumentationTok{\#\# Concatinate the directory and filename}
+    \DocumentationTok{\#\# e.g. directory = "C:/folder", filenames = vector("001.csv", "002.csv", ...), filepath="C:/folder/001.csv"}
+\NormalTok{    filepath}\OtherTok{=}\FunctionTok{paste}\NormalTok{(directory,}\StringTok{"/"}\NormalTok{ ,filenames[i], }\AttributeTok{sep=}\StringTok{""}\NormalTok{)}
+    
+    \DocumentationTok{\#\# read in each file and store it in data}
+\NormalTok{    data }\OtherTok{=} \FunctionTok{read.csv}\NormalTok{(filepath, }\AttributeTok{header =} \ConstantTok{TRUE}\NormalTok{)}
+    
+    \DocumentationTok{\#\#Get a subset of all rows with complete data meaning no NA\textquotesingle{}s}
+    \DocumentationTok{\#\#completeCases = subset(data, !is.na(Date) \& !is.na(sulfate) \& !is.na(nitrate) \& !is.na(id),select = TRUE )}
+\NormalTok{    completeCases }\OtherTok{=}\NormalTok{ data[}\FunctionTok{complete.cases}\NormalTok{(data), ]}
+    
+\NormalTok{    ids }\OtherTok{=}  \FunctionTok{c}\NormalTok{(ids, i)                    }\DocumentationTok{\#\# We can use i for id and concatinate a vector of id\textquotesingle{}s}
+\NormalTok{    nobss }\OtherTok{=} \FunctionTok{c}\NormalTok{(nobss, }\FunctionTok{nrow}\NormalTok{(completeCases) )}\DocumentationTok{\#\# Concatinates the number of completed rows from the subset into a vector}
+   
+\NormalTok{  \}}
+  \DocumentationTok{\#\# Return the data frame}
+  \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{id=}\NormalTok{ids, }\AttributeTok{nobs=}\NormalTok{nobss)}
+\NormalTok{\}}
+
+\CommentTok{\#Example usage}
+\FunctionTok{complete}\NormalTok{(}\StringTok{"\textasciitilde{}/Desktop/Week2/specdata"}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{12}\NormalTok{))}
+
+\CommentTok{\#Solution}
+\NormalTok{   id nobs}
+ \DecValTok{1}  \DecValTok{2} \DecValTok{1041}
+ \DecValTok{2}  \DecValTok{4}  \DecValTok{474}
+ \DecValTok{3}  \DecValTok{8}  \DecValTok{192}
+ \DecValTok{4} \DecValTok{10}  \DecValTok{148}
+ \DecValTok{5} \DecValTok{12}   \DecValTok{96}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{part-3-corr.r}{%
+\subsubsection{\texorpdfstring{Part 3
+(\href{https://github.com/kpnaga08/datasciencecoursera/blob/master/R\%20Programming/Project\textquotesingle{}\%20Assignment/Projects/corr.R}{corr.R})}{Part 3 (corr.R)}}\label{part-3-corr.r}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{corr }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(directory, }\AttributeTok{threshold =} \DecValTok{0}\NormalTok{) \{}
+  
+  \CommentTok{\# Reading in all files and making a large data.table}
+\NormalTok{  lst }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(}\FunctionTok{file.path}\NormalTok{(directory, }\FunctionTok{list.files}\NormalTok{(}\AttributeTok{path =}\NormalTok{ directory, }\AttributeTok{pattern=}\StringTok{"*.csv"}\NormalTok{)), data.table}\SpecialCharTok{::}\NormalTok{fread)}
+\NormalTok{  dt }\OtherTok{\textless{}{-}} \FunctionTok{rbindlist}\NormalTok{(lst)}
+  
+  \CommentTok{\# Only keep completely observed cases}
+\NormalTok{  dt }\OtherTok{\textless{}{-}}\NormalTok{ dt[}\FunctionTok{complete.cases}\NormalTok{(dt),]}
+  
+  \CommentTok{\# Apply threshold}
+\NormalTok{  dt }\OtherTok{\textless{}{-}}\NormalTok{ dt[, .(}\AttributeTok{nobs =}\NormalTok{ .N, }\AttributeTok{corr =} \FunctionTok{cor}\NormalTok{(}\AttributeTok{x =}\NormalTok{ sulfate, }\AttributeTok{y =}\NormalTok{ nitrate)), by }\OtherTok{=}\NormalTok{ ID][nobs }\SpecialCharTok{\textgreater{}}\NormalTok{ threshold]}
+  \FunctionTok{return}\NormalTok{(dt[, corr])}
+\NormalTok{\}}
+
+\CommentTok{\# Example Usage}
+\FunctionTok{corr}\NormalTok{(}\AttributeTok{directory =} \StringTok{\textquotesingle{}\textasciitilde{}/Desktop/specdata\textquotesingle{}}\NormalTok{, }\AttributeTok{threshold =} \DecValTok{150}\NormalTok{)}
+
+\CommentTok{\# Solution}
+\NormalTok{  [}\DecValTok{1}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.018957541} \SpecialCharTok{{-}}\FloatTok{0.140512544} \SpecialCharTok{{-}}\FloatTok{0.043897372} \SpecialCharTok{{-}}\FloatTok{0.068159562} \SpecialCharTok{{-}}\FloatTok{0.123506666}
+\NormalTok{  [}\DecValTok{6}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.075888144} \SpecialCharTok{{-}}\FloatTok{0.159673652} \SpecialCharTok{{-}}\FloatTok{0.086841940}  \FloatTok{0.763128837} \SpecialCharTok{{-}}\FloatTok{0.157828603}
+\NormalTok{ [}\DecValTok{11}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.156998919} \SpecialCharTok{{-}}\FloatTok{0.044898818}  \FloatTok{0.117249264}  \FloatTok{0.259057178}  \FloatTok{0.133274607}
+\NormalTok{ [}\DecValTok{16}\NormalTok{]  }\FloatTok{0.366201078}  \FloatTok{0.580751264}  \FloatTok{0.006863930}  \FloatTok{0.726693888}  \FloatTok{0.057741676}
+\NormalTok{ [}\DecValTok{21}\NormalTok{]  }\FloatTok{0.115338086}  \FloatTok{0.465754012}  \FloatTok{0.515804375}  \FloatTok{0.412693537}  \FloatTok{0.375631176}
+\NormalTok{ [}\DecValTok{26}\NormalTok{]  }\FloatTok{0.315725317}  \FloatTok{0.244560561}  \FloatTok{0.594426499}  \FloatTok{0.553514976}  \FloatTok{0.614340566}
+\NormalTok{ [}\DecValTok{31}\NormalTok{]  }\FloatTok{0.460513619}  \FloatTok{0.405022501}  \FloatTok{0.434789780}  \FloatTok{0.088421364}  \FloatTok{0.118136697}
+\NormalTok{ [}\DecValTok{36}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.091022820} \SpecialCharTok{{-}}\FloatTok{0.033091304}  \FloatTok{0.440660466} \SpecialCharTok{{-}}\FloatTok{0.029683708}  \FloatTok{0.268525390}
+\NormalTok{ [}\DecValTok{41}\NormalTok{]  }\FloatTok{0.277220958} \SpecialCharTok{{-}}\FloatTok{0.049108453}  \FloatTok{0.322627410}  \FloatTok{0.091139374} \SpecialCharTok{{-}}\FloatTok{0.025750053}
+\NormalTok{ [}\DecValTok{46}\NormalTok{]  }\FloatTok{0.120521602} \SpecialCharTok{{-}}\FloatTok{0.061746831}  \FloatTok{0.041306963} \SpecialCharTok{{-}}\FloatTok{0.146202136} \SpecialCharTok{{-}}\FloatTok{0.162485185}
+\NormalTok{ [}\DecValTok{51}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.097254393}  \FloatTok{0.089262856}  \FloatTok{0.568403991}  \FloatTok{0.711864008}  \FloatTok{0.268203237}
+\NormalTok{ [}\DecValTok{56}\NormalTok{]  }\FloatTok{0.190644585}  \FloatTok{0.227222983}  \FloatTok{0.229238882}  \FloatTok{0.005635506}  \FloatTok{0.018628108}
+\NormalTok{ [}\DecValTok{61}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.064750174}  \FloatTok{0.096614297}  \FloatTok{0.002864405}  \FloatTok{0.107184775}  \FloatTok{0.128477284}
+\NormalTok{ [}\DecValTok{66}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.042533572} \SpecialCharTok{{-}}\FloatTok{0.137041337}  \FloatTok{0.136609030}  \FloatTok{0.118975253}  \FloatTok{0.098073855}
+\NormalTok{ [}\DecValTok{71}\NormalTok{]  }\FloatTok{0.066928310}  \FloatTok{0.100212474} \SpecialCharTok{{-}}\FloatTok{0.063984344} \SpecialCharTok{{-}}\FloatTok{0.066525489} \SpecialCharTok{{-}}\FloatTok{0.129245884}
+\NormalTok{ [}\DecValTok{76}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.111066409} \SpecialCharTok{{-}}\FloatTok{0.089441210} \SpecialCharTok{{-}}\FloatTok{0.114090325} \SpecialCharTok{{-}}\FloatTok{0.106280702} \SpecialCharTok{{-}}\FloatTok{0.176855164}
+\NormalTok{ [}\DecValTok{81}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.116984680}  \FloatTok{0.019138583}  \FloatTok{0.100643502} \SpecialCharTok{{-}}\FloatTok{0.073858484}  \FloatTok{0.036665921}
+\NormalTok{ [}\DecValTok{86}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.107957809}  \FloatTok{0.296744105}  \FloatTok{0.347421569}  \FloatTok{0.146528765}  \FloatTok{0.362414577}
+\NormalTok{ [}\DecValTok{91}\NormalTok{]  }\FloatTok{0.093330832}  \FloatTok{0.198915192}  \FloatTok{0.164602262}  \FloatTok{0.180626975}  \FloatTok{0.176508543}
+\NormalTok{ [}\DecValTok{96}\NormalTok{]  }\FloatTok{0.139158631}  \FloatTok{0.231984399}  \FloatTok{0.227615918}  \FloatTok{0.275903634}  \FloatTok{0.299630040}
+\NormalTok{[}\DecValTok{101}\NormalTok{]  }\FloatTok{0.248143145}  \FloatTok{0.298344178} \SpecialCharTok{{-}}\FloatTok{0.056325366} \SpecialCharTok{{-}}\FloatTok{0.178114558}  \FloatTok{0.002032940}
+\NormalTok{[}\DecValTok{106}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.022802183} \SpecialCharTok{{-}}\FloatTok{0.001202233}  \FloatTok{0.085217423} \SpecialCharTok{{-}}\FloatTok{0.076409023}  \FloatTok{0.010021716}
+\NormalTok{[}\DecValTok{111}\NormalTok{]  }\FloatTok{0.016411646} \SpecialCharTok{{-}}\FloatTok{0.038785934} \SpecialCharTok{{-}}\FloatTok{0.075297768}  \FloatTok{0.041917773}  \FloatTok{0.193324040}
+\NormalTok{[}\DecValTok{116}\NormalTok{]  }\FloatTok{0.596929143}  \FloatTok{0.113596590} \SpecialCharTok{{-}}\FloatTok{0.143750037} \SpecialCharTok{{-}}\FloatTok{0.017703373}  \FloatTok{0.284905360}
+\NormalTok{[}\DecValTok{121}\NormalTok{]  }\FloatTok{0.305506111}  \FloatTok{0.150031306}  \FloatTok{0.134895077}  \FloatTok{0.172850003}  \FloatTok{0.286076203}
+\NormalTok{[}\DecValTok{126}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.106687748}  \FloatTok{0.244744168}  \FloatTok{0.337120085}  \FloatTok{0.424798956}  \FloatTok{0.095921881}
+\NormalTok{[}\DecValTok{131}\NormalTok{]  }\FloatTok{0.022899033}  \FloatTok{0.143330735}  \FloatTok{0.087196218}  \FloatTok{0.408741028}  \FloatTok{0.425176879}
+\NormalTok{[}\DecValTok{136}\NormalTok{]  }\FloatTok{0.361728434} \SpecialCharTok{{-}}\FloatTok{0.035090337} \SpecialCharTok{{-}}\FloatTok{0.082388453} \SpecialCharTok{{-}}\FloatTok{0.094742313} \SpecialCharTok{{-}}\FloatTok{0.087573726}
+\NormalTok{[}\DecValTok{141}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.060405837} \SpecialCharTok{{-}}\FloatTok{0.092398269} \SpecialCharTok{{-}}\FloatTok{0.183197353}  \FloatTok{0.124650112} \SpecialCharTok{{-}}\FloatTok{0.053001162}
+\NormalTok{[}\DecValTok{146}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.039911536}  \FloatTok{0.010158287}  \FloatTok{0.451828854}  \FloatTok{0.295793699}  \FloatTok{0.615268727}
+\NormalTok{[}\DecValTok{151}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.075214053}  \FloatTok{0.132207405}  \FloatTok{0.089547098} \SpecialCharTok{{-}}\FloatTok{0.019086127} \SpecialCharTok{{-}}\FloatTok{0.045552626}
+\NormalTok{[}\DecValTok{156}\NormalTok{]  }\FloatTok{0.211599525} \SpecialCharTok{{-}}\FloatTok{0.073972834}  \FloatTok{0.112668377}  \FloatTok{0.138387891} \SpecialCharTok{{-}}\FloatTok{0.003207550}
+\NormalTok{[}\DecValTok{161}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.052643174}  \FloatTok{0.042168144} \SpecialCharTok{{-}}\FloatTok{0.067460173} \SpecialCharTok{{-}}\FloatTok{0.030882797}  \FloatTok{0.017805647}
+\NormalTok{[}\DecValTok{166}\NormalTok{]  }\FloatTok{0.026138073} \SpecialCharTok{{-}}\FloatTok{0.050287543}  \FloatTok{0.016535643}  \FloatTok{0.199919014}  \FloatTok{0.482158286}
+\NormalTok{[}\DecValTok{171}\NormalTok{]  }\FloatTok{0.355110474}  \FloatTok{0.589606340}  \FloatTok{0.368038099} \SpecialCharTok{{-}}\FloatTok{0.029094866} \SpecialCharTok{{-}}\FloatTok{0.074495323}
+\NormalTok{[}\DecValTok{176}\NormalTok{]  }\FloatTok{0.262101561} \SpecialCharTok{{-}}\FloatTok{0.005386993}  \FloatTok{0.258826380}  \FloatTok{0.144110820}  \FloatTok{0.101915017}
+\NormalTok{[}\DecValTok{181}\NormalTok{]  }\FloatTok{0.023020993}  \FloatTok{0.074594252}  \FloatTok{0.256665139}  \FloatTok{0.162401158} \SpecialCharTok{{-}}\FloatTok{0.003454405}
+\NormalTok{[}\DecValTok{186}\NormalTok{]  }\FloatTok{0.190141976}  \FloatTok{0.184581239}  \FloatTok{0.120596460} \SpecialCharTok{{-}}\FloatTok{0.176233152} \SpecialCharTok{{-}}\FloatTok{0.144699131}
+\NormalTok{[}\DecValTok{191}\NormalTok{]  }\FloatTok{0.147074115}  \FloatTok{0.273520382}  \FloatTok{0.109557323} \SpecialCharTok{{-}}\FloatTok{0.092863394} \SpecialCharTok{{-}}\FloatTok{0.182752126}
+\NormalTok{[}\DecValTok{196}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.008836513}  \FloatTok{0.356592359} \SpecialCharTok{{-}}\FloatTok{0.089133895} \SpecialCharTok{{-}}\FloatTok{0.017185129} \SpecialCharTok{{-}}\FloatTok{0.156323514}
+\NormalTok{[}\DecValTok{201}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.042538204}  \FloatTok{0.010235676} \SpecialCharTok{{-}}\FloatTok{0.009912754} \SpecialCharTok{{-}}\FloatTok{0.042910367} \SpecialCharTok{{-}}\FloatTok{0.210567709}
+\NormalTok{[}\DecValTok{206}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.155957816}  \FloatTok{0.046211272} \SpecialCharTok{{-}}\FloatTok{0.060808231}  \FloatTok{0.160865053}  \FloatTok{0.615095781}
+\NormalTok{[}\DecValTok{211}\NormalTok{]  }\FloatTok{0.598343330}  \FloatTok{0.506535631}  \FloatTok{0.191834811} \SpecialCharTok{{-}}\FloatTok{0.024723462} \SpecialCharTok{{-}}\FloatTok{0.150627164}
+\NormalTok{[}\DecValTok{216}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.002500089} \SpecialCharTok{{-}}\FloatTok{0.166201361}  \FloatTok{0.619349867}  \FloatTok{0.531380642}  \FloatTok{0.520115665}
+\NormalTok{[}\DecValTok{221}\NormalTok{]  }\FloatTok{0.466673962}  \FloatTok{0.518820173}  \FloatTok{0.394191512}  \FloatTok{0.379446208} \SpecialCharTok{{-}}\FloatTok{0.123172036}
+\NormalTok{[}\DecValTok{226}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.061565518} \SpecialCharTok{{-}}\FloatTok{0.180133963}  \FloatTok{0.253978075}  \FloatTok{0.139867175}  \FloatTok{0.316429404}
+\NormalTok{[}\DecValTok{231}\NormalTok{]  }\FloatTok{0.268780500}  \FloatTok{0.279397143}  \FloatTok{0.267260662}  \FloatTok{0.287133842}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{part-3-alternate-solution}{%
+\subsubsection{Part 3 Alternate
+Solution}\label{part-3-alternate-solution}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\FunctionTok{source}\NormalTok{(}\StringTok{"complete.R"}\NormalTok{)}
+\NormalTok{corr }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(directory, }\AttributeTok{threshold =} \DecValTok{0}\NormalTok{)\{}
+  
+\NormalTok{  completes }\OtherTok{=} \FunctionTok{complete}\NormalTok{(directory, }\DecValTok{1}\SpecialCharTok{:}\DecValTok{332}\NormalTok{)}
+\NormalTok{  completes\_above\_threshold }\OtherTok{=} \FunctionTok{subset}\NormalTok{(completes, nobs }\SpecialCharTok{\textgreater{}}\NormalTok{ threshold )}
+  
+  \DocumentationTok{\#\# Initialize empty vector variable}
+\NormalTok{  correlations }\OtherTok{\textless{}{-}} \FunctionTok{vector}\NormalTok{()}
+  
+  \DocumentationTok{\#\# Get a list of filenames}
+\NormalTok{  filenames }\OtherTok{=} \FunctionTok{list.files}\NormalTok{(directory)}
+  
+  \DocumentationTok{\#\# For each .csv file in id}
+  \ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in}\NormalTok{ completes\_above\_threshold}\SpecialCharTok{$}\NormalTok{id)\{}
+    
+    \DocumentationTok{\#\# Concatinate the directory and filename}
+    \DocumentationTok{\#\# e.g. directory = "C:/folder", filenames = vector("001.csv", "002.csv", ...), filepath="C:/folder/001.csv"}
+\NormalTok{    filepath}\OtherTok{=}\FunctionTok{paste}\NormalTok{(directory,}\StringTok{"/"}\NormalTok{ ,filenames[i], }\AttributeTok{sep=}\StringTok{""}\NormalTok{)}
+    
+    \DocumentationTok{\#\# read in each file and store it in data}
+\NormalTok{    data }\OtherTok{=} \FunctionTok{read.csv}\NormalTok{(filepath, }\AttributeTok{header =} \ConstantTok{TRUE}\NormalTok{)}
+    
+    \DocumentationTok{\#\# Calculate and store the number of completed cases}
+\NormalTok{    completeCases }\OtherTok{=}\NormalTok{ data[}\FunctionTok{complete.cases}\NormalTok{(data),]}
+\NormalTok{    count }\OtherTok{=} \FunctionTok{nrow}\NormalTok{(completeCases)}
+    
+    \DocumentationTok{\#\# Calculate and store the count of complete cases}
+    \DocumentationTok{\#\# if threshhold is reached}
+    \ControlFlowTok{if}\NormalTok{( count }\SpecialCharTok{\textgreater{}=}\NormalTok{ threshold ) \{}
+\NormalTok{      correlations }\OtherTok{=} \FunctionTok{c}\NormalTok{(correlations, }\FunctionTok{cor}\NormalTok{(completeCases}\SpecialCharTok{$}\NormalTok{nitrate, completeCases}\SpecialCharTok{$}\NormalTok{sulfate) )}
+\NormalTok{    \}}
+\NormalTok{  \}}
+\NormalTok{  correlations}
+\NormalTok{\}}
+\CommentTok{\# Example Usage}
+\NormalTok{cr }\OtherTok{\textless{}{-}} \FunctionTok{corr}\NormalTok{(}\StringTok{"\textasciitilde{}/Desktop/Week2/specdata"}\NormalTok{, }\DecValTok{150}\NormalTok{)}
+\FunctionTok{head}\NormalTok{(cr)}
+
+\CommentTok{\#Solution}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\SpecialCharTok{{-}}\FloatTok{0.01895754} \SpecialCharTok{{-}}\FloatTok{0.14051254} \SpecialCharTok{{-}}\FloatTok{0.04389737} \SpecialCharTok{{-}}\FloatTok{0.06815956} \SpecialCharTok{{-}}\FloatTok{0.12350667} \SpecialCharTok{{-}}\FloatTok{0.07588814}
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
