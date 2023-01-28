@@ -31,7 +31,8 @@ pollutantmean <- function(directory, pollutant, id= 1:332){
 
 pollutantmean(directory = '~/Desktop/Week2/specdata', pollutant = 'sulfate', id = 1:10)
 pollutantmean(directory = '~/Desktop/Week2/specdata', pollutant = 'nitrate', id = 70:72)
-
+pollutantmean('~/Desktop/Week2/specdata', pollutant = 'sulfate', id= 34)
+pollutantmean('~/Desktop/Week2/specdata', pollutant = 'nitrate')
 # Part 2 Alternate Solution
 
 complete <- function(directory, id= 1:332){
